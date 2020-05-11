@@ -6,7 +6,7 @@
 
 https://github.com/apiunit
 
-## Projekt APIunit jest wspierany przez [API Foundation](https://apifoundation.com)
+## Projekt APIunit jest wspierany przez [API Foundation](https://www.apifoundation.com)
 
 We started in 2018 with few concepts but one idea: fastest development.
 Now, in 2020 we are giving solutions:
