@@ -10,10 +10,20 @@ https://github.com/apiunit
 
 it's about management in Project
 Businnes knwodlegde in Porject
-Defined Lgoic of Managemetn in Whole Organisation
-The goal is creating responsibly team around the project
-which can support each other from 1 day at work on the project.
-Flows in organisation.
+
+Defining Logic of Management in a Whole Organisation.
+
+The goal is creating responsibly team through doing the project with continuously improving.
++ Definition of units
++ Standardisation
++ Modularisation
+
+Improve the  efficiency from 1 day in first hours at work on the project.
+Learning relationships in a team, cooperation, creating many connections, finding the best units for a single task.
+
+
+
+## Flows in organisation.
 
 Definitions of Factors and numbers which we want to reach.
 
@@ -23,8 +33,19 @@ Standardization -> Modularization -> Automatization
 
 Standardization <-> Modularization
 
-
 ## TODO
++ Game to learn how to create it effective
++ use the real market and check your models in automatisation,
++ how it works and how change it to improe sales
++ how to sale products and services, where are differences
++ how to sale defined services
+  + abo model
+  + defined price & time, for non defined service
+  + defined price & time, for defined service
+  + pay as much as you want, not defined price, defined time, non defined service, for testing customers feedback
+
+
+## Books
 
 [Amazon.com: Multi-Unit Leadership: The 7 Stages of Building Profitable Stores Across Multiple Markets: Jim Sullivan, Sullivision.com: Audible Audiobooks](https://www.amazon.com/-/de/dp/B07LB84VFY/)
 
