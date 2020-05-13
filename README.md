@@ -30,6 +30,8 @@ Standardization <-> Modularization
 
 [Amazon.com: The First 90 Days, Updated and Expanded: Proven Strategies for Getting Up to Speed Faster and Smarter: Michael Watkins, Grover Gardner, Gildan Media, LLC: Audible Audiobooks](https://www.amazon.com/-/de/First-Days-Updated-Expanded-Strategies/dp/B00CH7FE1O/)
 
+[Amazon.com: Fix This Next: Make the Vital Change That Will Level Up Your Business: Mike Michalowicz, Mike Michalowicz, Penguin Audio: Audible Audiobooks](https://www.amazon.com/Fix-This-Next-Change-Business/dp/B082LLS1L9/)
+
 # The project is supported by [API Foundation](https://www.apifoundation.com)
 We started in 2018 with few concepts but one idea: fastest development.
 Now, in 2020 we are giving solutions:
