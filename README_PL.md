@@ -12,10 +12,10 @@ https://github.com/apiunit
 
 Projekt APIunit jest wspierany przez [API Foundation](https://www.apifoundation.com)
 
-Cel APIfoundation jest rozwój ekosystemu w celu szybszego wytwarzania oprogramowania
+Celem jest rozwój ekosystemu w celu szybszego wytwarzania oprogramowania
 
 
-Obecnie istnieje kilka narzędzi od planowania po uruchamianie i utrzymanie oprogramowania:
+Obecnie istnieje kilka narzędzi, od planowania po uruchamianie i utrzymanie oprogramowania:
 
 + [APIexec - executor library for shell scripts](https://www.apiexec.com)
 + [APIcra - shell scripts libraries](https://www.apicra.com)
