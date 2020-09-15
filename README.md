@@ -1,11 +1,11 @@
 + [polish version - PL](https://www.apiunit.com/README_PL.html)
 
-# [APIunit / www](https://github.com/apiunit)
+# [APIunit](https://github.com/apiunit) / [www](https://github.com/apiunit/www)
 
 ![apiunit-logo.png](https://logo.apiunit.com/apiunit-logo.png)
 
-+ [www](https://www.apiunit.com)
-+ [git repositories](https://github.com/apiunit)
++ [apiunit.com](https://www.apiunit.com)
++ [git](https://github.com/apiunit/www)
 
 ## What mean APIunit
 
