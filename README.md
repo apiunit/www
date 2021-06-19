@@ -24,6 +24,45 @@ Learning relationships in a team, cooperation, creating many connections, findin
 
 
 
+### APIunit
+apiunit.com
+
+"apiunit" 874
+"api-unit" 75600
+"api unit" 78100
+
++ api of unit: API jednostki.
++ api based unit: jednostka oparta na API.
++ api based on unit: API oparte na jednostce.
+
+
+API unit(Noun)
+"American Petroleum Institute"
+
+A unit of radioactivity used for measuring natural gamma rays in the ground. The radioactivity of a typical shale is 100 API units.
+
+
+## unit-api
+unitapi.com
+
+unit of api.
+The Unit of Measurement API provides a set of Java language programming interfaces for handling units and quantities.
+The interfaces provide a layer which separates client code, that would call the API,
+from library code, which implements the API.
+
+"unitapi" - 3730
+"unit-api" - 39000
+"unit api" - 44000
+
++ unit of api: jednostka API.
++ unit based api: interfejs oparty na jednostkach
++ unit based on api: jednostka oparta na API.
+
+
+https://www.webcomponents.org/specs
+
+
+
 ## Flows in organisation.
 
 Definitions of Factors and numbers which we want to reach.
