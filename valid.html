@@ -55,9 +55,8 @@
               document.getElementById('yaml-content').textContent = error.message;
             });
         }
-    window.addEventListener('load', (event) => {
-          
-            
+
+                
         function validateYAML(data, schema) {
           const ajv = new Ajv();
           const validate = ajv.compile(schema);
@@ -65,6 +64,10 @@
           if (!valid) console.error(validate.errors);
           return valid;
         }
+    
+    window.addEventListener('load', (event) => {
+          
+
       
   });
     
