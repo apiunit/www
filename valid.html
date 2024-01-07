@@ -14,14 +14,12 @@
   <input type="text" id="yaml-url" value="https://raw.githubusercontent.com/apiunit/www/master/project.yaml" />
   
   <button onclick="loadYAML()">Odczytaj plik</button>
-    <button onclick="loadVaildYAML()">Odczytaj i waliduj plik</button>
+    <button onclick="loadValidYAML()">Odczytaj i waliduj plik</button>
   <pre id="yaml-content"></pre>
 
   <script>
     
 
-    window.addEventListener('load', (event) => {
-          
        function loadYAML() {
           var url = document.getElementById('yaml-url').value;
           fetch(url)
@@ -39,7 +37,7 @@
         }
         
         
-        function loadVaildYAML() {
+        function loadValidYAML() {
           var url = document.getElementById('yaml-url').value;
           var schemaUrl = 'schema.json';
         
@@ -57,6 +55,8 @@
               document.getElementById('yaml-content').textContent = error.message;
             });
         }
+    window.addEventListener('load', (event) => {
+          
             
         function validateYAML(data, schema) {
           const ajv = new Ajv();
