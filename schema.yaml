@@ -1,0 +1,30 @@
+type: object
+properties:
+  research:
+    type: object
+    properties:
+      goal:
+        type: string
+      hypotheses:
+        type: array
+        items:
+          type: string
+      ...
+  
+  development:
+    type: object
+    properties:
+      requirements:
+        type: array
+        items:
+          type: string
+      ...
+  # Tutaj można dopisać kolejne sekcje tak jak MVP, Offer, itd.
+required:
+  - research
+  - development
+  # - mvp
+  # - offer
+  # - first_sale
+  # - monitoring
+  # - sales_growth
