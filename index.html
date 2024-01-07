@@ -18,6 +18,29 @@
 
 <body>
 
+  <h1>Odczyt pliku YAML</h1>
+  <input type="text" id="yaml-url" value="https://raw.githubusercontent.com/apiunit/www/master/project.yaml" />
+  <button onclick="loadYAML()">Odczytaj plik</button>
+  <pre id="yaml-content"></pre>
+
+  <script>
+    function loadYAML() {
+      var url = document.getElementById('yaml-url').value;
+      fetch(url)
+        .then(response => {
+          if (response.ok) return response.text();
+          throw new Error('Błąd sieci lub nie znaleziono pliku!');
+        })
+        .then(data => {
+          var yamlContent = jsyaml.load(data);
+          document.getElementById('yaml-content').textContent = JSON.stringify(yamlContent, null, 2);
+        })
+        .catch(error => {
+          document.getElementById('yaml-content').textContent = error.message;
+        });
+    }
+  </script>
+    
 
   <h1>Project Progress</h1>
   <pre id="progress-container"></pre>
