@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <title>Odczyt pliku YAML</title>
+
   
   <script src="https://cdn.jsdelivr.net/npm/ajv/dist/ajv.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/js-yaml@3/dist/js-yaml.min.js"></script>  
-  
+  <script src="js/validateYAML.js"></script>
 </head>
 <body>
   <h1>Plik YAML</h1>
@@ -57,13 +58,7 @@
         }
 
                 
-        function validateYAML(data, schema) {
-          const ajv = new Ajv();
-          const validate = ajv.compile(schema);
-          const valid = validate(data);
-          if (!valid) console.error(validate.errors);
-          return valid;
-        }
+
     
     window.addEventListener('load', (event) => {
           
