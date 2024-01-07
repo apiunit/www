@@ -1,0 +1,10 @@
+research:
+  goal: Zrozumienie potrzeb rynku
+  hypotheses:
+    - Hipoteza 1
+    - Hipoteza 2
+
+development:
+  requirements:
+    - Wymaganie 1
+    - Wymaganie 2
