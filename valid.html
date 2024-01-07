@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Odczyt pliku YAML</title>
-  <script src="https://cdn.jsdelivr.net/npm/js-yaml@3/dist/js-yaml.min.js"></script>  
+  
   <script src="https://cdn.jsdelivr.net/npm/ajv/dist/ajv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@3/dist/js-yaml.min.js"></script>  
+  
 </head>
 <body>
   <h1>Plik YAML</h1>
@@ -17,49 +19,54 @@
 
   <script>
     
-    function loadYAML() {
-      var url = document.getElementById('yaml-url').value;
-      fetch(url)
-        .then(response => {
-          if (response.ok) return response.text();
-          throw new Error('Błąd sieci lub nie znaleziono pliku!');
-        })
-        .then(data => {
-          var yamlContent = jsyaml.load(data);
-          document.getElementById('yaml-content').textContent = JSON.stringify(yamlContent, null, 2);
-        })
-        .catch(error => {
-          document.getElementById('yaml-content').textContent = error.message;
-        });
-    }
-    
-    
-    function loadVaildYAML() {
-      var url = document.getElementById('yaml-url').value;
-      var schemaUrl = 'schema.json';
-    
-      Promise.all([fetch(url), fetch(schemaUrl)])
-        .then(responses => Promise.all(responses.map(res => res.text())))
-        .then(([yamlData, jsonSchema]) => {
-          const jsonData = jsyaml.load(yamlData);
-          const schema = JSON.parse(jsonSchema);
-          return validateYAML(jsonData, schema);
-        })
-        .then(isValid => {
-          document.getElementById('yaml-content').textContent = isValid ? 'YAML is valid!' : 'YAML is invalid!';
-        })
-        .catch(error => {
-          document.getElementById('yaml-content').textContent = error.message;
-        });
-    }
+
+    window.addEventListener('load', (event) => {
+          
+       function loadYAML() {
+          var url = document.getElementById('yaml-url').value;
+          fetch(url)
+            .then(response => {
+              if (response.ok) return response.text();
+              throw new Error('Błąd sieci lub nie znaleziono pliku!');
+            })
+            .then(data => {
+              var yamlContent = jsyaml.load(data);
+              document.getElementById('yaml-content').textContent = JSON.stringify(yamlContent, null, 2);
+            })
+            .catch(error => {
+              document.getElementById('yaml-content').textContent = error.message;
+            });
+        }
         
-    function validateYAML(data, schema) {
-      const ajv = new Ajv();
-      const validate = ajv.compile(schema);
-      const valid = validate(data);
-      if (!valid) console.error(validate.errors);
-      return valid;
-    }
+        
+        function loadVaildYAML() {
+          var url = document.getElementById('yaml-url').value;
+          var schemaUrl = 'schema.json';
+        
+          Promise.all([fetch(url), fetch(schemaUrl)])
+            .then(responses => Promise.all(responses.map(res => res.text())))
+            .then(([yamlData, jsonSchema]) => {
+              const jsonData = jsyaml.load(yamlData);
+              const schema = JSON.parse(jsonSchema);
+              return validateYAML(jsonData, schema);
+            })
+            .then(isValid => {
+              document.getElementById('yaml-content').textContent = isValid ? 'YAML is valid!' : 'YAML is invalid!';
+            })
+            .catch(error => {
+              document.getElementById('yaml-content').textContent = error.message;
+            });
+        }
+            
+        function validateYAML(data, schema) {
+          const ajv = new Ajv();
+          const validate = ajv.compile(schema);
+          const valid = validate(data);
+          if (!valid) console.error(validate.errors);
+          return valid;
+        }
+      
+  });
     
   </script>
 </body>
