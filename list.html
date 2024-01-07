@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YAML Requirements Loader</title>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@3/dist/js-yaml.min.js"></script>
+</head>
+<body>
+  
+  <h1>Pobieranie i wyświetlanie pola 'requirements' z plików YAML</h1>
+  <textarea id="yaml-urls" rows="10" cols="50">
+https://github.com/apiunit/www/new/master/project.yaml
+https://github.com/apiunit/www/new/master/project.yaml
+
+  </textarea><br>
+  <button onclick="loadYAMLFiles()">Pobierz i wyświetl 'requirements'</button>
+  <div id="requirements-container"></div>
+
+  <script>
+    async function loadYAMLFiles() {
+      const urlsTextarea = document.getElementById('yaml-urls');
+      const urls = urlsTextarea.value.trim().split('\n');
+
+      const requirementsContainer = document.getElementById('requirements-container');
+      requirementsContainer.innerHTML = '';
+
+      for (const url of urls) {
+        try {
+          const response = await fetch(url);
+          const yamlText = await response.text();
+          const yamlData = jsyaml.load(yamlText);
+          const requirements = yamlData.requirements || [];
+
+          const requirementsList = document.createElement('ul');
+          for (const requirement of requirements) {
+            const listItem = document.createElement('li');
+            listItem.textContent = requirement;
+            requirementsList.appendChild(listItem);
+          }
+
+          requirementsContainer.appendChild(requirementsList);
+        } catch (error) {
+          console.error(`Błąd podczas ładowania pliku YAML z ${url}:`, error);
+          const errorMessage = document.createElement('p');
+          errorMessage.textContent = `Błąd podczas ładowania pliku YAML z ${url}: ${error.message}`;
+          requirementsContainer.appendChild(errorMessage);
+        }
+      }
+    }
+  </script>
+</body>
+</html>
