@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="utf-8">
-
-    <title>www.oneday.run</title>
+      <title>Progress Dashboard</title>
+      <script src="js/yaml.min.js"></script>
+      <script src="js/main.js"></script>
 
     <link rel="stylesheet" href="//md.softreck.dev/reset.css">
     <link rel="stylesheet" href="//md.softreck.dev/reveal.css">
@@ -16,33 +17,38 @@
 
 <body>
 
-<div class="reveal">
 
-    <div class="slides">
-
-        <!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines -->
-        <section data-markdown="README.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
-
+  <h1>Project Progress</h1>
+  <pre id="progress-container"></pre>
+    
+    
+    <div class="reveal">
+    
+        <div class="slides">
+    
+            <!-- Use external markdown resource, separate slides by three newlines; vertical slides by two newlines -->
+            <section data-markdown="README.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n"></section>
+    
+        </div>
+    
     </div>
-
-</div>
-
-<script src="//md.softreck.dev/dist/reveal.js"></script>
-<script src="//md.softreck.dev/plugin/markdown/markdown.js"></script>
-
-<script>
-
-    Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
-
-        plugins: [RevealMarkdown]
-    });
-
-</script>
-
+    
+    <script src="//md.softreck.dev/dist/reveal.js"></script>
+    <script src="//md.softreck.dev/plugin/markdown/markdown.js"></script>
+    
+    <script>
+    
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: true,
+    
+            plugins: [RevealMarkdown]
+        });
+    
+    </script>
+    
 
 </body>
 </html>
