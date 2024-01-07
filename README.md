@@ -1,3 +1,7 @@
+# [apiunit](http://www.apiunit.com)
+
++ [js-yaml - npm](https://www.npmjs.com/package/js-yaml)
+
 W zarządzaniu projektami nie istnieje jeden uniwersalny standard formatu pliku, który byłby przypisany do pomiaru postępu pracy nad każdym etapem projektu.
 + badania (research)
 + rozwój (development)
